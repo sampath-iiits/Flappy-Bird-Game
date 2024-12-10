@@ -1,0 +1,119 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, #87CEEB, #4682B4);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 10px 0;
+}
+
+#canvas {
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    background-image: url("Background.png");
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite;
+    width: 80%; /* Scales dynamically */
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 5 / 4; /* Maintains aspect ratio */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    }
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #FF4500; /* Orange-Red */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF6347; /* Lighter Orange-Red */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.score {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+}
+
+.retry-button {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #board {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .score {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    #board {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .score {
+        font-size: 1.2rem;
+    }
+}
