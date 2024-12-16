@@ -19,4 +19,8 @@ A simple and fun Flappy Bird game implemented using JavaScript, HTML5 , and CSS.
 4. The game ends when the bird collides with a pipe or the ground.
 5. After a game over, press the `Retry` button to play again.
 
+## Deployed Link
+
+[Flappy Bird Game](https://flappy-bird-game-jade.vercel.app/)
+
 ![FlappyBird Game](https://github.com/user-attachments/assets/d2c12650-bb00-46f1-a27a-539b91b8fa9a)
